@@ -1,8 +1,7 @@
 TyneAuth::Engine.routes.draw do
-  devise_for :users, :class_name => "TyneAuth::User"
+  #devise_for :users, :class_name => "TyneAuth::User"
 
-  resources :users
-  resources :organizations
+  resources :welcome, :only => :index
 
-  root :to => 'users#index'
+  root :to => 'welcome#index'
 end
