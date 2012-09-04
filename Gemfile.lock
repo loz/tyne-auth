@@ -38,6 +38,7 @@ PATH
   remote: .
   specs:
     tyne_auth (0.0.1)
+      octokit
       omniauth
       omniauth-github
       rails (~> 3.2.8)
@@ -112,6 +113,8 @@ GEM
       railties (>= 3.0.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
+    faraday_middleware (0.8.8)
+      faraday (>= 0.7.4, < 0.9)
     ffi (1.1.5)
     fssm (0.2.9)
     guard (1.3.2)
@@ -158,6 +161,12 @@ GEM
       jwt (~> 0.1.4)
       multi_json (~> 1.0)
       rack (~> 1.2)
+    octokit (1.12.0)
+      addressable (~> 2.2)
+      faraday (~> 0.8)
+      faraday_middleware (~> 0.8)
+      hashie (~> 1.2)
+      multi_json (~> 1.3)
     omniauth (1.1.1)
       hashie (~> 1.2)
       rack
