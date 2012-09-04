@@ -1,0 +1,4 @@
+en:
+  authentication:
+    sign_in:
+      github: "Sign in with Github"
