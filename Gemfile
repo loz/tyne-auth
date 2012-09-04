@@ -3,13 +3,12 @@ source "http://rubygems.org"
 gemspec
 
 gem "jquery-rails"
-gem 'devise'
 
 gem 'responders'
 gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
 
 # Tyne
-gem 'tyne-ui', :git => "git@github.com:tyne/tyne-ui.git"
+gem 'tyne_ui', :git => "https://github.com/tyne/tyne-ui.git"
 
 # Webserver
 gem 'thin'
@@ -20,5 +19,5 @@ end
 
 # Testing
 group :test, :development do
-  gem 'tyne-dev', :git => "git@github.com:tyne/tyne-dev.git"
+  gem 'tyne_dev', :git => "https://github.com/tyne/tyne-dev.git"
 end

@@ -1,8 +1,5 @@
 module TyneAuth
   class User < ActiveRecord::Base
-    devise :database_authenticatable, :registerable,
-           :recoverable, :rememberable, :trackable, :validatable
-
-    attr_accessible :firstname, :lastname, :email, :password, :password_confirmation, :remember_me
+    attr_accessible :firstname, :lastname
   end
 end
