@@ -1,8 +1,10 @@
 class CreateTyneAuthUsers < ActiveRecord::Migration
   def change
     create_table :tyne_auth_users do |t|
-      t.string :firstname
-      t.string :lastname
+      t.string :uid
+      t.string :name
+      t.string :email
+      t.string :token
 
       t.timestamps
     end
