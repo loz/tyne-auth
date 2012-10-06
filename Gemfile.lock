@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/tyne/tyne-dev.git
-  revision: 5a5735f4f8b7f57a59bd7d6d866568f4e65e843d
+  revision: 38fdfff09410c6ffac79fb0f66a1539d20e2b9c7
   branch: master
   specs:
     tyne_dev (0.0.1)
