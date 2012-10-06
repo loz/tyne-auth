@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(:version => 20120606201844) do
   create_table "tyne_auth_users", :force => true do |t|
     t.string   "uid"
     t.string   "name"
+    t.string   "username"
+    t.string   "email"
     t.string   "token"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

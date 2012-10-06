@@ -1,5 +1,3 @@
-module TyneAuth
-  class ApplicationController < ActionController::Base
-    protect_from_forgery
-  end
+class TyneAuth::ApplicationController < ApplicationController
+  protect_from_forgery
 end

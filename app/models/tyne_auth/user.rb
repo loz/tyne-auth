@@ -1,8 +1,12 @@
 module TyneAuth
   class User < ActiveRecord::Base
     validates :name, :uid, :token, :presence => true
-    attr_accessible :name, :uid, :email, :token
+    attr_accessible :name, :username, :uid, :email, :token
 
+    # Creates or finds a user based on the given user id.
+    #
+    # @param Hash
+    # @return TyneAuth::User
     def self.find_or_create(auth_hash)
       unless user = find_by_uid(auth_hash["uid"])
         user = create! do |user|
