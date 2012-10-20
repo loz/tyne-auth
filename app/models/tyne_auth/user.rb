@@ -1,4 +1,5 @@
 module TyneAuth
+  # Represents an user
   class User < ActiveRecord::Base
     validates :name, :uid, :token, :presence => true
     attr_accessible :name, :username, :uid, :email, :token
@@ -21,6 +22,9 @@ module TyneAuth
       user
     end
 
+    # Returns a Github API wrapper.
+    #
+    # @return Octokit::Client
     def github_client
       Octokit::Client.new(:login => username, :oauth_token => token)
     end

@@ -1,6 +1,7 @@
 require "tyne_auth/extensions/action_controller"
 
 module TyneAuth
+  # Contains global extensions
   module Extensions
   end
 end

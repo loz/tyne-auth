@@ -2,6 +2,7 @@ require "action_controller/base"
 
 module TyneAuth
   module Extensions
+    # Extends the ActionController::Base
     module ActionController
 
       extend ActiveSupport::Concern
@@ -11,8 +12,11 @@ module TyneAuth
         before_filter :require_login
       end
 
+      # Returns the current user if user is logged in or nil.
+      #
+      # @return TyneAuth::User
       def current_user
-        User.find(session[:user_id]) if session[:user_id]
+        TyneAuth::User.find(session[:user_id]) if session[:user_id]
       end
 
       private

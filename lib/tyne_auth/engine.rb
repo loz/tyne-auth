@@ -3,6 +3,7 @@ require "omniauth-github"
 require "octokit"
 
 module TyneAuth
+  # Authentication engine
   class Engine < ::Rails::Engine
     isolate_namespace TyneAuth
 
