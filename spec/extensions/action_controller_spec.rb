@@ -23,7 +23,7 @@ describe TyneAuth::Extensions::ActionController, :type => :controller do
       subject.stub(:current_user).and_return(:foo)
     end
 
-    it "should deny access" do
+    it "should not deny access" do
       get :index
       response.should be_success
     end

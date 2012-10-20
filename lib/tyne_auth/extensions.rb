@@ -1,6 +1,7 @@
+require "tyne_auth/extensions/action_controller"
+
 module TyneAuth
   module Extensions
-    autoload :ActionController, "tyne_auth/extensions/action_controller"
   end
 end
 

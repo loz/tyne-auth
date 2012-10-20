@@ -1,5 +1,5 @@
 require "tyne_auth/engine"
+require "tyne_auth/extensions"
 
 module TyneAuth
-  autoload :Extensions, "tyne_auth/extensions"
 end
