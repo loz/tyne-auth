@@ -28,7 +28,7 @@ describe TyneAuth::User do
 
     context "user with uid does not exist" do
       let(:auth_details) do
-        HashWithIndifferentAccess.new(:uid => "1", :info => { :name => "Foo", :nickname => "Bar", :email => "foo@bar.com" }, :credentials => { :token => "123456" })
+        HashWithIndifferentAccess.new(:uid => "1", :info => { :name => "Foo", :nickname => "Bar", :email => "foo@bar.com" }, :credentials => { :token => "123456" }, :extra => { :raw_info => { :gravatar_id => "1" } })
       end
 
       it "should create a new user" do

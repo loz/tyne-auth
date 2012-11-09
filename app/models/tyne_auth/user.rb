@@ -2,7 +2,7 @@ module TyneAuth
   # Represents an user
   class User < ActiveRecord::Base
     validates :name, :uid, :token, :presence => true
-    attr_accessible :name, :username, :uid, :email, :token
+    attr_accessible :name, :username, :uid, :email, :token, :gravatar_id
 
     # Creates or finds a user based on the given user id.
     #
@@ -16,6 +16,7 @@ module TyneAuth
           user.username = auth_hash["info"]["nickname"]
           user.email = auth_hash["info"]["email"]
           user.token = auth_hash["credentials"]["token"]
+          user.gravatar_id = auth_hash["extra"]["raw_info"]["gravatar_id"]
         end
       end
 
