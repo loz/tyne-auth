@@ -6,7 +6,7 @@ module TyneAuth
 
     # Creates or finds a user based on the given user id.
     #
-    # @param Hash
+    # @param auth_hash
     # @return TyneAuth::User
     def self.find_or_create(auth_hash)
       unless user = find_by_uid(auth_hash["uid"])

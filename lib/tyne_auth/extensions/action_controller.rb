@@ -8,8 +8,12 @@ module TyneAuth
       extend ActiveSupport::Concern
 
       included do
-        helper_method :current_user
+        helper_method :current_user, :admin_area?
         before_filter :require_login
+      end
+
+      def admin_area?
+        false
       end
 
       # Returns the current user if user is logged in or nil.

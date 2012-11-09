@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/tyne/tyne-dev.git
-  revision: 8d89ef5bafcad1c26379b2a8654e316237622c92
+  revision: a38daaeb48d71c85804a8129d4047fbace2f34f7
   branch: master
   specs:
     tyne_dev (0.0.1)
@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: https://github.com/tyne/tyne-ui.git
-  revision: b2a6ac96c693825dad331c782bc018b257384116
+  revision: e41eca2cecd0616b84f02424c0436d2f211bbc8a
   branch: master
   specs:
     tyne_ui (0.0.1)
