@@ -12,7 +12,7 @@ module TyneAuth
       unless user = find_by_uid(auth_hash["uid"])
         user = create! do |user|
           user.uid = auth_hash["uid"]
-          user.name = auth_hash["info"]["name"]
+          user.name = auth_hash["info"]["name"] || auth_hash["info"]["nickname"]
           user.username = auth_hash["info"]["nickname"]
           user.email = auth_hash["info"]["email"]
           user.token = auth_hash["credentials"]["token"]

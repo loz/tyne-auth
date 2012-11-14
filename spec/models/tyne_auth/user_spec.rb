@@ -16,7 +16,7 @@ describe TyneAuth::User do
   end
 
   describe :find_or_create do
-    context "user with uid already exists" do
+    context "when user exists" do
       before :each do
         TyneAuth::User.stub(:find_by_uid).and_return(:foo)
       end
@@ -26,7 +26,7 @@ describe TyneAuth::User do
       end
     end
 
-    context "user with uid does not exist" do
+    context "when user does not exist" do
       let(:auth_details) do
         HashWithIndifferentAccess.new(:uid => "1", :info => { :name => "Foo", :nickname => "Bar", :email => "foo@bar.com" }, :credentials => { :token => "123456" }, :extra => { :raw_info => { :gravatar_id => "1" } })
       end
@@ -44,6 +44,13 @@ describe TyneAuth::User do
         new_user.username = "Bar"
         new_user.email = "foo@bar.com"
         new_user.token = "123456"
+      end
+
+      it "should default the name to the nickname if not given in the auth details" do
+        auth_details[:info].delete(:name)
+        new_user = TyneAuth::User.find_or_create(auth_details)
+        new_user.name = "Foo"
+        new_user.username = "Foo"
       end
     end
   end
