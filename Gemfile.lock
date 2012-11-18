@@ -1,13 +1,13 @@
 GIT
-  remote: git://github.com/josevalim/active_model_serializers.git
-  revision: 655c4fe1c2985d980d0dafb49eef3706412c1ed8
+  remote: https://github.com/rails-api/active_model_serializers.git
+  revision: 9f5e1b1776b67e2a601b0205fbba705a0cde55e6
   specs:
-    active_model_serializers (0.5.0)
-      activemodel (~> 3.0)
+    active_model_serializers (0.5.2)
+      activemodel (>= 3.0)
 
 GIT
   remote: https://github.com/tyne/tyne-dev.git
-  revision: a38daaeb48d71c85804a8129d4047fbace2f34f7
+  revision: 53097a8668657217193a8c53d7aa114ed69b80b1
   branch: master
   specs:
     tyne_dev (0.0.1)
