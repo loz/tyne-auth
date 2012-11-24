@@ -1,6 +1,6 @@
 # tyne-auth
 
-[![travis-ci](https://secure.travis-ci.org/tyne/tyne-auth.png)](http://travis-ci.org/#!/tyne/tyne-auth) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/tyne/tyne-auth)
+[![travis-ci](https://secure.travis-ci.org/tyne/tyne-auth.png)](http://travis-ci.org/#!/tyne/tyne-auth) [![Dependency Status](https://gemnasium.com/tyne/tyne.png)](https://gemnasium.com/tyne/auth) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/tyne/tyne-auth)
 
 ## Description
 
