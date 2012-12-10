@@ -4,6 +4,9 @@ module TyneAuth
     validates :name, :uid, :token, :presence => true
     attr_accessible :name, :username, :uid, :email, :token, :gravatar_id
 
+    has_many :organization_memberships, :class_name => 'TyneAuth::OrganizationMembership'
+    has_many :organizations, :through => :organization_memberships, :class_name => 'TyneAuth::Organization'
+
     # Creates or finds a user based on the given user id.
     #
     # @param auth_hash

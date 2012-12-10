@@ -17,4 +17,5 @@ end
 # Testing
 group :test, :development do
   gem 'tyne_dev', :git => "https://github.com/tyne/tyne-dev.git", :branch => "master"
+  gem 'rb-inotify'
 end
