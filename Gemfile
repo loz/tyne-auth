@@ -4,7 +4,6 @@ gemspec
 
 gem "jquery-rails"
 
-gem 'responders'
 gem "active_model_serializers", :git => "https://github.com/rails-api/active_model_serializers.git"
 
 # Webserver
