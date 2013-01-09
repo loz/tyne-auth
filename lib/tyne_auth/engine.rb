@@ -5,6 +5,11 @@ require "octokit"
 module TyneAuth
   # Authentication engine
   class Engine < ::Rails::Engine
+    config.generators do |g|
+      g.test_framework = :rspec
+      g.integration_tool = :rspec
+    end
+
     isolate_namespace TyneAuth
 
     initializer "tyne_auth.omniauth" do |app|

@@ -30,7 +30,7 @@ GIT
 PATH
   remote: .
   specs:
-    tyne_auth (0.0.1)
+    tyne_auth (0.0.2)
       octokit
       omniauth
       omniauth-github
@@ -211,6 +211,8 @@ GEM
     rainbow (1.1.4)
     rake (10.0.3)
     rb-fsevent (0.9.3)
+    rb-inotify (0.8.8)
+      ffi (>= 0.5.0)
     rdoc (3.12)
       json (~> 1.4)
     rspec (2.12.0)
@@ -274,6 +276,7 @@ DEPENDENCIES
   active_model_serializers!
   jquery-rails
   pg
+  rb-inotify
   sqlite3
   thin
   tyne_auth!
