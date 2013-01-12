@@ -18,8 +18,6 @@ describe TyneAuth::Extensions::ActionController, :type => :controller do
     @controller = TestController.new
   end
 
-  its(:admin_area?) { should be_false }
-
   context :logged_in do
     before :each do
       subject.stub(:current_user).and_return(:foo)

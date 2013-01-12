@@ -12,10 +12,6 @@ module TyneAuth
         before_filter :require_login
       end
 
-      def admin_area?
-        false
-      end
-
       # Returns the current user if user is logged in or nil.
       #
       # @return TyneAuth::User
