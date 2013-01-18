@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe TyneAuth::SessionsController do
   before :each do
-    subject.stub(:require_login).and_return(:foo)
+    subject.stub(:current_user).and_return(TyneAuth::User.new)
   end
 
   describe :destroy do

@@ -1,7 +1,7 @@
 module TyneAuth
   # Handles requests to create and destroy sessions (e.g. login, logout)
   class SessionsController < ApplicationController
-    skip_before_filter :require_login, :only => [:new, :create, :failure]
+    before_filter :require_login, :only => [:destroy]
 
     # Tries to login user with provided details or creates a new user
     # It redirects to the root page

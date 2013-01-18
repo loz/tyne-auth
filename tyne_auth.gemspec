@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency "omniauth"
   s.add_dependency "omniauth-github"
   s.add_dependency "octokit"
+  s.add_dependency "twitter-bootstrap-rails"
 
   s.add_development_dependency "sqlite3"
 end
