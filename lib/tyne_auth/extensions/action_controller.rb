@@ -9,7 +9,7 @@ module TyneAuth
 
       included do
         helper_method :current_user, :admin_area?
-        before_filter :require_login
+        before_filter :add_breadcrumb_root
       end
 
       # Returns the current user if user is logged in or nil.
@@ -22,10 +22,12 @@ module TyneAuth
       private
       def require_login
         unless current_user
-          flash[:warning] = I18n.t("authentication.login_first")
-
           redirect_to(main_app.login_path)
         end
+      end
+
+      def add_breadcrumb_root
+        add_breadcrumb "Dashboard", main_app.root_path if current_user
       end
     end
   end
