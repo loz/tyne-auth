@@ -8,7 +8,8 @@ module TyneAuth
     def create
       auth_hash = request.env['omniauth.auth']
 
-      user = TyneAuth::User.find_or_create(auth_hash)
+
+      user = TyneAuth::AuthProcessor.new(auth_hash).find_or_create_user
       session[:user_id] = user.id
 
       redirect_to main_app.root_path, :notice => I18n.t("authentication.logged_in", :username => user.name)
